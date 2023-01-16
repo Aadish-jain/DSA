@@ -66,6 +66,26 @@ void AlpbPattern4(int n)
   }
 }
 
+void AlpbPattern5(int n){
+
+  for(int i = 1; i <= n; i++){
+    char ch = 'A' + n - 1;
+    for(int j = 1; j <= i; j++){
+      cout << ch;
+      ch = ch - 1;
+    }
+    cout<< endl;
+  }
+}
+
+void AlpbPattern6(int n){
+  for(int i = 0; i <n ; i++){
+    for(char ch = 'E' - i; ch <= 'E'; ch++){
+      cout << ch << " ";
+    }
+    cout << endl;
+  }
+}
 
 int main()
 {
@@ -78,6 +98,10 @@ int main()
   AlpbPattern3(input);
   cout << endl;
   AlpbPattern4(input);
+  cout << endl;
+  AlpbPattern5(input);
+  cout << endl;
+  AlpbPattern6(input);
   cout << endl;
   return 0;
 }
