@@ -59,5 +59,11 @@ int main()
   Pair1();
   Pair2();
   Pair3();
+  auto a = 12;  //automatically assume the data type based on the value
+  cout << a << endl;
+  auto b = "Aadish Jain";
+  cout << b << endl;
+  auto c = 'a';
+  cout << c << endl;
   return 0;
 }
