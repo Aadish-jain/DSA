@@ -110,5 +110,20 @@ cout << "Maximum size of vector: " << max << endl;
 //capacity() -> it returns the current capacity of the vector
 int cap = v.capacity();
 cout << "Current capacity of vector: " << cap << endl;
+
+// print vector
+for( auto it : v ) {
+  cout<< it<<" ";
+}
+cout << endl;
+int index = lower_bound(v.begin(), v.end(), 10) - v.begin();
+cout << "lower bound index of 10 is : " << index << endl;
+int index2 = upper_bound(v.begin(), v.end(), 10) - v.begin();
+cout << "Upper bound index of 10 is : " << index2 << endl;
+int index3 = lower_bound(v.begin(), v.end(), 40) - v.begin();
+cout << "lower bound index of 40 is : " << index3 << endl;
+int index4 = upper_bound(v.begin(), v.end(), 40) - v.begin();
+cout << "Upper bound index of 40 is : " << index4 << endl;
+
 return 0;
 }
