@@ -43,6 +43,45 @@ cin >> X;
     num = num + arr[i] * pow(2,31-i);
   }
   cout << "Reverse of " << X << " after binary conversion is: ";
-  cout << num;
+  cout << num << endl;
+
+
+
+/*
+Question 3: Given a signed 32-bit integer x, return x with its digits reversed. 
+If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1],
+then return 0.
+Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+*/
+
+  int x;
+  cin >> x;
+  long long rev1 = 0;
+  long long num1 = x, isNeg = 0;
+  long long lastdigit;
+  if (num1 < 0)
+  {
+    isNeg = 1;
+  }
+  x = abs(x);
+  for (long long i = 0; x > 0; i++)
+  {
+    lastdigit = x % 10;
+    rev1 = rev1 * 10 + lastdigit;
+    x = x / 10;
+  }
+  if (isNeg == 1)
+  {
+    rev1 = (rev1 * -1);
+  }
+  if (rev1 > (-1 * (pow(2, 31))) && rev1 < ((pow(2, 31) - 1)))
+  {
+    cout << rev1;
+  }
+  else
+  {
+    cout << 0;
+  }
+
   return 0;
 }
