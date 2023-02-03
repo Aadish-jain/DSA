@@ -17,10 +17,10 @@ int main()
   cin >> str;
   if (palindrome(0, str) == true)
   {
-    cout << "Yes" << endl;
+    cout << "String is Palindrome" << endl;
   }
   else
   {
-    cout << "No" << endl;
+    cout << "String is not a Palindrome" << endl;
   }
 }
