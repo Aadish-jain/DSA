@@ -39,16 +39,22 @@ void printArray(int arr[], int size)
 
 void StableselectionSort(int arr[], int n)
 {
-  for(int i = 0; i < n-1; i++){
+  for (int i = 0; i < n - 1; i++)
+  {
     int min = i;
-    for(int j = i + 1; j < n; j++){
-      if( arr[min] > arr[j]){ min = j;}
+    for (int j = i + 1; j < n; j++)
+    {
+      if (arr[min] > arr[j])
+      {
+        min = j;
+      }
     }
     int key = arr[min];
-    for(int k = min; k > 0; k--){
+    for (int k = min; k > i; k--)
+    {
       arr[k] = arr[k - 1];
-      arr[i] = key;
     }
+    arr[i] = key;
   }
 }
 
@@ -56,7 +62,9 @@ int main()
 {
   int arr[] = {64, 11, 12, 10, 0, 1, 9};
   int n = sizeof(arr) / sizeof(arr[0]);
-  selectionSort(arr, n);
+  // selectionSort(arr, n);
+  printArray(arr, n);
+  cout << endl;
   StableselectionSort(arr, n);
   cout << "Sorted array: \n";
   printArray(arr, n);
